@@ -1,7 +1,7 @@
 # Snakemake Workflow Example for Data Preprocessing and Visualization
 
 ## Overview
-This project demonstrates a Snakemake workflow for preprocessing and visualizing biological data. The workflow automates the steps of data cleaning, statistical analysis, and generating visualizations for datasets stored in the `data/` directory. 
+This project demonstrates a Snakemake workflow for preprocessing and visualizing biological data. The workflow automates the steps of data cleaning, statistical analysis and generating visualizations for datasets stored in the `data/` directory. 
 
 *Provided data is a traning data and does not contain any real information, thus examples will not make any statistical sense.*
 
