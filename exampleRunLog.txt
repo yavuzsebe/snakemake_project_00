@@ -1,0 +1,214 @@
+(snakemake) ➜  snakemake_project_00 snakemake --cores 1 -s Snakefile
+Assuming unrestricted shared filesystem usage.
+host: yavuzsebe.local
+Building DAG of jobs...
+Using shell: /opt/local/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job           count
+----------  -------
+all               1
+preprocess        1
+visualize         1
+total             3
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Fri Jul  4 19:24:11 2025]
+localrule preprocess:
+    input: data/sample_dataset.csv
+    output: data/preprocessed_sample_dataset.csv
+    jobid: 2
+    reason: Missing output files: data/preprocessed_sample_dataset.csv
+    wildcards: data=sample_dataset
+    resources: tmpdir=/var/folders/5g/4xnqz48967g9j0y98m4c380h0000gn/T
+
+===       PREPROCESS EXECUTION STARTED      ===
+
+
+Data size before preprocessing: 10000x111
+
+No missing values detected.
+
+
+No duplicate values detected.
+
+Column 'GENE_1': Removed 104 rows due to outliers.
+Column 'GENE_2': Removed 71 rows due to outliers.
+Column 'GENE_3': Removed 60 rows due to outliers.
+Column 'GENE_4': Removed 71 rows due to outliers.
+Column 'GENE_5': Removed 85 rows due to outliers.
+Column 'GENE_6': Removed 54 rows due to outliers.
+Column 'GENE_7': Removed 58 rows due to outliers.
+Column 'GENE_8': Removed 66 rows due to outliers.
+Column 'GENE_9': Removed 62 rows due to outliers.
+Column 'GENE_10': Removed 71 rows due to outliers.
+Column 'GENE_11': Removed 71 rows due to outliers.
+Column 'GENE_12': Removed 63 rows due to outliers.
+Column 'GENE_13': Removed 69 rows due to outliers.
+Column 'GENE_14': Removed 73 rows due to outliers.
+Column 'GENE_15': Removed 58 rows due to outliers.
+Column 'GENE_16': Removed 61 rows due to outliers.
+Column 'GENE_17': Removed 54 rows due to outliers.
+Column 'GENE_18': Removed 56 rows due to outliers.
+Column 'GENE_19': Removed 67 rows due to outliers.
+Column 'GENE_20': Removed 65 rows due to outliers.
+Column 'GENE_21': Removed 57 rows due to outliers.
+Column 'GENE_22': Removed 54 rows due to outliers.
+Column 'GENE_23': Removed 62 rows due to outliers.
+Column 'GENE_24': Removed 70 rows due to outliers.
+Column 'GENE_25': Removed 57 rows due to outliers.
+Column 'GENE_26': Removed 51 rows due to outliers.
+Column 'GENE_27': Removed 51 rows due to outliers.
+Column 'GENE_28': Removed 50 rows due to outliers.
+Column 'GENE_29': Removed 43 rows due to outliers.
+Column 'GENE_30': Removed 56 rows due to outliers.
+Column 'GENE_31': Removed 55 rows due to outliers.
+Column 'GENE_32': Removed 53 rows due to outliers.
+Column 'GENE_33': Removed 53 rows due to outliers.
+Column 'GENE_34': Removed 57 rows due to outliers.
+Column 'GENE_35': Removed 60 rows due to outliers.
+Column 'GENE_36': Removed 69 rows due to outliers.
+Column 'GENE_37': Removed 41 rows due to outliers.
+Column 'GENE_38': Removed 62 rows due to outliers.
+Column 'GENE_39': Removed 49 rows due to outliers.
+Column 'GENE_40': Removed 55 rows due to outliers.
+Column 'GENE_41': Removed 53 rows due to outliers.
+Column 'GENE_42': Removed 61 rows due to outliers.
+Column 'GENE_43': Removed 55 rows due to outliers.
+Column 'GENE_44': Removed 65 rows due to outliers.
+Column 'GENE_45': Removed 49 rows due to outliers.
+Column 'GENE_46': Removed 42 rows due to outliers.
+Column 'GENE_47': Removed 53 rows due to outliers.
+Column 'GENE_48': Removed 44 rows due to outliers.
+Column 'GENE_49': Removed 65 rows due to outliers.
+Column 'GENE_50': Removed 47 rows due to outliers.
+Column 'GENE_51': Removed 63 rows due to outliers.
+Column 'GENE_52': Removed 60 rows due to outliers.
+Column 'GENE_53': Removed 46 rows due to outliers.
+Column 'GENE_54': Removed 52 rows due to outliers.
+Column 'GENE_55': Removed 59 rows due to outliers.
+Column 'GENE_56': Removed 51 rows due to outliers.
+Column 'GENE_57': Removed 41 rows due to outliers.
+Column 'GENE_58': Removed 36 rows due to outliers.
+Column 'GENE_59': Removed 42 rows due to outliers.
+Column 'GENE_60': Removed 44 rows due to outliers.
+Column 'GENE_61': Removed 42 rows due to outliers.
+Column 'GENE_62': Removed 43 rows due to outliers.
+Column 'GENE_63': Removed 50 rows due to outliers.
+Column 'GENE_64': Removed 40 rows due to outliers.
+Column 'GENE_65': Removed 33 rows due to outliers.
+Column 'GENE_66': Removed 35 rows due to outliers.
+Column 'GENE_67': Removed 33 rows due to outliers.
+Column 'GENE_68': Removed 61 rows due to outliers.
+Column 'GENE_69': Removed 49 rows due to outliers.
+Column 'GENE_70': Removed 54 rows due to outliers.
+Column 'GENE_71': Removed 58 rows due to outliers.
+Column 'GENE_72': Removed 34 rows due to outliers.
+Column 'GENE_73': Removed 34 rows due to outliers.
+Column 'GENE_74': Removed 36 rows due to outliers.
+Column 'GENE_75': Removed 35 rows due to outliers.
+Column 'GENE_76': Removed 28 rows due to outliers.
+Column 'GENE_77': Removed 40 rows due to outliers.
+Column 'GENE_78': Removed 26 rows due to outliers.
+Column 'GENE_79': Removed 30 rows due to outliers.
+Column 'GENE_80': Removed 35 rows due to outliers.
+Column 'GENE_81': Removed 41 rows due to outliers.
+Column 'GENE_82': Removed 48 rows due to outliers.
+Column 'GENE_83': Removed 36 rows due to outliers.
+Column 'GENE_84': Removed 48 rows due to outliers.
+Column 'GENE_85': Removed 46 rows due to outliers.
+Column 'GENE_86': Removed 37 rows due to outliers.
+Column 'GENE_87': Removed 39 rows due to outliers.
+Column 'GENE_88': Removed 28 rows due to outliers.
+Column 'GENE_89': Removed 29 rows due to outliers.
+Column 'GENE_90': Removed 47 rows due to outliers.
+Column 'GENE_91': Removed 47 rows due to outliers.
+Column 'GENE_92': Removed 31 rows due to outliers.
+Column 'GENE_93': Removed 38 rows due to outliers.
+Column 'GENE_94': Removed 29 rows due to outliers.
+Column 'GENE_95': Removed 40 rows due to outliers.
+Column 'GENE_96': Removed 45 rows due to outliers.
+Column 'GENE_97': Removed 21 rows due to outliers.
+Column 'GENE_98': Removed 47 rows due to outliers.
+Column 'GENE_99': Removed 45 rows due to outliers.
+Column 'GENE_100': Removed 29 rows due to outliers.
+Column 'Age': Removed 41 rows due to outliers.
+Column 'Status': Removed 0 rows due to outliers.
+Column 'Survival_Months': Removed 0 rows due to outliers.
+Column 'BMI': Removed 36 rows due to outliers.
+Column 'Inflammation_Marker': Removed 57 rows due to outliers.
+Column 'Cholesterol': Removed 35 rows due to outliers.
+
+Data size after preprocessing: 4792x111
+
+5208 columns removed.
+
+data/preprocessed_sample_dataset.csv saved successfully.
+
+
+=== PREPROCESS EXECUTION ENDED SUCCESSFULLY ===
+
+[Fri Jul  4 19:24:16 2025]
+Finished jobid: 2 (Rule: preprocess)
+1 of 3 steps (33%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Fri Jul  4 19:24:16 2025]
+localrule visualize:
+    input: data/preprocessed_sample_dataset.csv
+    output: results/PCA_sample_dataset.png, results/Heatmap_sample_dataset.png, results/Boxplot_sample_dataset.png, results/miscGraph_sample_dataset.png, results/Summary_sample_dataset.txt, results/PVAL_sample_dataset.txt
+    jobid: 1
+    reason: Missing output files: results/Boxplot_sample_dataset.png, results/miscGraph_sample_dataset.png, results/PCA_sample_dataset.png, results/Summary_sample_dataset.txt, results/PVAL_sample_dataset.txt, results/Heatmap_sample_dataset.png; Input files updated by another job: data/preprocessed_sample_dataset.csv
+    wildcards: data=sample_dataset
+    resources: tmpdir=/var/folders/5g/4xnqz48967g9j0y98m4c380h0000gn/T
+
+===       VISUALIZATION EXECUTION STARTED      ===
+
+Generating summary:
+
+Information saved as data/Summary_sample_dataset.txt
+
+Generating PVAL information:
+
+Information saved as results/PVAL_sample_dataset.txt
+
+Generating PCA:
+
+Explained variance ratio: [0.01312566 0.01275327]
+Plot saved as data/PCA_sample_dataset.png
+
+Generating heatmap:
+
+Plot saved as data/Heatmap_sample_dataset.png
+
+Generating boxplot:
+
+Plot saved as data/Boxplot_sample_dataset.png
+
+Generating miscellanous graph:
+
+Plot saved as data/miscGraph_sample_dataset.png
+
+
+=== VISUALIZATION EXECUTION ENDED SUCCESSFULLY ===
+
+[Fri Jul  4 19:24:26 2025]
+Finished jobid: 1 (Rule: visualize)
+2 of 3 steps (67%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Fri Jul  4 19:24:26 2025]
+localrule all:
+    input: results/PCA_sample_dataset.png, results/Heatmap_sample_dataset.png, results/Boxplot_sample_dataset.png, results/miscGraph_sample_dataset.png, results/Summary_sample_dataset.txt, results/PVAL_sample_dataset.txt
+    jobid: 0
+    reason: Input files updated by another job: results/Boxplot_sample_dataset.png, results/miscGraph_sample_dataset.png, results/PCA_sample_dataset.png, results/Summary_sample_dataset.txt, results/PVAL_sample_dataset.txt, results/Heatmap_sample_dataset.png
+    resources: tmpdir=/var/folders/5g/4xnqz48967g9j0y98m4c380h0000gn/T
+[Fri Jul  4 19:24:26 2025]
+Finished jobid: 0 (Rule: all)
+3 of 3 steps (100%) done
+Complete log(s): /Users/yavuzsebe/MassiveBioinformaticsInternship/snakemake-workflow-example/snakemake_project_00/.snakemake/log/2025-07-04T192411.893475.snakemake.log
