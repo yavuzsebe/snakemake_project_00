@@ -106,8 +106,8 @@ def generatePCA(geneExpression, outputPATH):
 
     plt.scatter(gene_expression_pca[:, 0], gene_expression_pca[:, 1], alpha=0.7)
     plt.title("PCA of Gene Expression")
-    plt.xlabel("Principal Component 1")
-    plt.ylabel("Principal Component 2")
+    plt.xlabel(f"Principal Component 1\n(%{round(pca.explained_variance_ratio_[0],4)*100})")
+    plt.ylabel(f"Principal Component 2\n(%{round(pca.explained_variance_ratio_[1],4)*100})")
 
     plt.savefig(f"{outputPATH}PCA{dataName}.png", dpi=300, bbox_inches="tight")
     print(f"Plot saved as data/PCA{dataName}.png\n")
