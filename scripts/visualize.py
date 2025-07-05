@@ -77,7 +77,6 @@ def generatePVAL(dataALL, outputPATH):
     signpvals01 = np.where(PVAL < 0.01)[0]
     signpvals05 = np.where(PVAL < 0.05)[0]
 
-    # Write PVAL information to a .txt file
     with open(f"{outputPATH}PVAL{dataName}.txt", "w") as file:
         file.write("PVAL Information\n")
         file.write("================\n")

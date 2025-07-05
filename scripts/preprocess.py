@@ -20,9 +20,9 @@ def preprocess(dataPATH, outputPATH):
         print(data.isnull().sum())
 
         for col in data.columns:
-            if data[col].dtype in ['float64', 'int64']:  # Numeric columns
+            if data[col].dtype in ['float64', 'int64']:  
                 data[col] = data[col].fillna(data[col].mean())
-            else:  # Non-numeric columns
+            else:  
                 data[col] = data[col].fillna(data[col].mode()[0])
 
         print("\nMissing Values After Cleaning\n")
