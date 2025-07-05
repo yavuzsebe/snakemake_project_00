@@ -25,7 +25,7 @@ snakemake_project_00
 ### Rules
 1. **Preprocess**:
    - Cleans the raw dataset (`data/sample_dataset.csv`).
-   - Replaces missing values, duplicates and removes outliers.
+   - Replaces missing values and duplicates, removes outliers.
    - Saves the preprocessed dataset to `data/preprocessed_sample_dataset.csv`.
 
 2. **Visualize**:
@@ -36,28 +36,6 @@ snakemake_project_00
      - Miscellaneous graph (`results/miscGraph_sample_dataset.png`)
      - Summary statistics (`results/Summary_sample_dataset.txt`)
      - P-value analysis (`results/PVAL_sample_dataset.txt`)
-
-### Execution
-To run the workflow:
-1. Navigate to working directory:
-    ```bash
-    cd ~/snakemake_project_00
-    ```
-
-2. Create the Conda environment:
-   ```bash
-   conda env create -n snakemakeDummyEnv -f envs/environment.yml
-   ```
-
-3. Activate the environment:
-   ```bash
-   conda activate snakemakeDummyEnv
-   ```
-
-4. Execute the workflow:
-   ```bash
-   snakemake --cores 1 
-   ```
 
 ## Dependencies
 The workflow requires the following tools and libraries:
@@ -78,6 +56,28 @@ All libraries needed can be obtained via the `environment.yml` file in the `envs
         - glob
         - sys
         - os
+
+## Execution
+To run the workflow:
+1. Navigate to working directory:
+    ```bash
+    cd ~/snakemake_project_00
+    ```
+
+2. Create the Conda environment:
+   ```bash
+   conda env create -n snakemakeDummyEnv -f envs/environment.yml
+   ```
+
+3. Activate the environment:
+   ```bash
+   conda activate snakemakeDummyEnv
+   ```
+
+4. Execute the workflow:
+   ```bash
+   snakemake --cores 1 
+   ```
 
 ## Outputs
 The results are saved in the `results/` directory:

@@ -12,11 +12,11 @@ def preprocess(dataPATH, outputPATH):
         print("\n===        PREPROCESS EXECUTION FAILED      ===\n")
         sys.exit(1)
     beforeSize=data.shape
-    print(f"\nData size before preprocessing: {beforeSize[0]}x{beforeSize[1]}")
+    print(f"\nData size before preprocessing: {beforeSize[0]}x{beforeSize[1]}\n")
 
     missing_values = data.isnull().sum().sum()
     if missing_values > 0:
-        print("\nMissing Values Before Cleaning\n")
+        print("Missing Values Before Cleaning\n")
         print(data.isnull().sum())
 
         for col in data.columns:
@@ -25,22 +25,22 @@ def preprocess(dataPATH, outputPATH):
             else:  
                 data[col] = data[col].fillna(data[col].mode()[0])
 
-        print("\nMissing Values After Cleaning\n")
+        print("Missing Values After Cleaning\n")
         print(data.isnull().sum())
     else:
-        print("\nNo missing values detected.\n")
+        print("No missing values detected.\n")
 
     duplicates = data.duplicated().sum()
     if duplicates > 0:
-        print("\nDuplicates Before Cleaning\n")
+        print("Duplicates Before Cleaning\n")
         print(data.duplicated().sum())
 
         data = data.drop_duplicates()
 
-        print("\nDuplicates After Cleaning\n")
+        print("Duplicates After Cleaning\n")
         print(data.duplicated().sum())
     else:
-        print("\nNo duplicate values detected.\n")
+        print("No duplicate values detected.\n")
 
     for col in data.select_dtypes(include=['float64', 'int64']).columns:
         Q1 = data[col].quantile(0.25)

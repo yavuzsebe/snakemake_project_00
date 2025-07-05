@@ -38,7 +38,7 @@ def importData(dataPATH):
     return dataALL, geneExpression
 
 def generateSummary(dataALL, outputPATH):
-    print("Generating summary:\n")
+    print("Generating summary:")
 
     dataColnames = list(dataALL.columns)
     dataDtypes = list(dataALL.dtypes)
@@ -63,7 +63,7 @@ def generateSummary(dataALL, outputPATH):
     print(f"Information saved as data/Summary{dataName}.txt\n")
 
 def generatePVAL(dataALL, outputPATH):
-    print("Generating PVAL information:\n")
+    print("Generating PVAL information:")
 
     healthySamples = dataALL[dataALL["Diagnosis"] == "Healthy"].iloc[:, 1:101]
     nonHealthySamples = dataALL[dataALL["Diagnosis"] != "Healthy"].iloc[:, 1:101]
@@ -96,13 +96,13 @@ def generatePVAL(dataALL, outputPATH):
     print(f"Information saved as {outputPATH}PVAL{dataName}.txt\n")
 
 def generatePCA(geneExpression, outputPATH):
-    print("Generating PCA:\n")
+    print("Generating PCA:")
     scaler = StandardScaler()
     geneExpression_scaled = scaler.fit_transform(geneExpression)
 
     pca = PCA(n_components=2)
     gene_expression_pca = pca.fit_transform(geneExpression)
-    print("Explained variance ratio:", pca.explained_variance_ratio_)
+    print(f"Explained variance ratio: {pca.explained_variance_ratio_}\n")
 
     plt.scatter(gene_expression_pca[:, 0], gene_expression_pca[:, 1], alpha=0.7)
     plt.title("PCA of Gene Expression")
@@ -113,7 +113,7 @@ def generatePCA(geneExpression, outputPATH):
     print(f"Plot saved as data/PCA{dataName}.png\n")
 
 def generateHeatmap(geneExpression, outputPATH):
-    print("Generating heatmap:\n")
+    print("Generating heatmap:")
     plt.figure(figsize=(15, 12))
     
     sns.heatmap(geneExpression.iloc[:50, :50], cmap="viridis", xticklabels=True, yticklabels=True)
@@ -125,7 +125,7 @@ def generateHeatmap(geneExpression, outputPATH):
     print(f"Plot saved as data/Heatmap{dataName}.png\n")
 
 def generateBoxplot(geneExpression, outputPATH):
-    print("Generating boxplot:\n")
+    print("Generating boxplot:")
     plt.figure(figsize=(15, 12))
     
     sns.boxplot(data=geneExpression.iloc[:, :50])  
@@ -137,7 +137,7 @@ def generateBoxplot(geneExpression, outputPATH):
     print(f"Plot saved as data/Boxplot{dataName}.png\n")
 
 def miscGraph(dataALL, outputPATH):
-    print("Generating miscellanous graph:\n")
+    print("Generating miscellanous graph:")
     survival_by_diagnosis = dataALL.groupby("Diagnosis")["Survival_Months"].mean().reset_index()
 
     plt.figure(figsize=(10, 6))
